@@ -15,5 +15,9 @@ class Classification extends Model
         'age'
     ];
 
+    public function movies(){
+        return $this->hasOne('App\Models\Movie');
+    }
+
 
 }

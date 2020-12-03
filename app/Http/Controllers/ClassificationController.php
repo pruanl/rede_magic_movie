@@ -14,7 +14,7 @@ class ClassificationController extends Controller
 
     public function index()
     {
-        $classifications = Classification::all();
+        $classifications = Classification::with('movies')->get();
         return $this->jsonResponse($classifications);
     }
 
